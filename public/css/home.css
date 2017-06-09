@@ -1,0 +1,239 @@
+body,*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #303030;
+}
+p{
+    margin: 0;
+}
+#title-bar{
+    width: 100%;
+    height: 60px;
+    background-color: #23ac86;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+#menu-icon{
+    width: 32px;
+    height: 32px;
+    background-color: inherit;
+    position: relative;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+}
+#menu-icon img{
+    cursor: pointer;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+#para-cont{
+    min-width: 300px;
+    height: 50px;
+    background-color:inherit; 
+    position: absolute;
+    left: 140px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#para-cont h1{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#menu{
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    left: -280px;
+    top: 60px;
+    background-color: white;
+    box-shadow: 0px 0px 10px grey;
+    z-index: 3;
+    font-family: 'Montserrat', sans-serif;
+    transition-duration: 0.4s;
+
+}
+#menu div{
+    width: 100%;
+    height: 50px;
+  /* background-color: grey;
+    border-bottom: 1px solid red;*/
+    position: relative;
+}
+#menu h2{
+    margin: 0;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #393939;
+}
+#menu p{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    color: #393939;
+}
+#mask{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 1;
+}
+.material-icons{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    margin: 0;
+    font-size: 32px;
+    color: #393939;
+}
+.home{
+    color: #23ac86;
+}
+/*feed section*/
+.container{
+    width: 100%;
+    min-height: 60px;
+    /*background-color: gray;*/
+    margin-top: 80px;
+    transition-duration: 0.4s;
+    position: relative;
+
+}
+.posts{
+    width: 600px;
+    min-height: 20px;
+    /*background-color: teal;*/
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.slideLeft{
+    transform: translateX(0px);
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.slideRight{
+    width: 80%;
+    left: 20%;
+    top: 0;
+}
+.post{
+    width: 100%;
+    min-height: 100px;
+    background-color: #efefef;
+    margin: 20px;
+    box-shadow: 0px 0px 2px 0px rgba(107,107,107,1);
+}
+.post-head{
+    width: 100%;
+    min-height: 48px;
+    position: relative;
+    padding:  5px 10px;
+}
+
+.author-img-cont{
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.author-img-cont img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.post-head p.author-name{
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+.post-head .post-time{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 60px;
+}
+.options-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.options-icon:active{
+    background-color: #cccccc;
+}
+.options-icon .fa-ellipsis-v{
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+}
+.post-options{
+    width: 150px;
+    min-height: 30px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 70%;
+    right: 20px;
+    border-radius: 2px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(94,94,94,1);
+    opacity: 0;
+}
+.post-options div{
+    width: 100%;
+    min-height: 5px;
+    padding: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.post-options div:hover{
+    color: teal;
+}
+/*post-body*/
+.post-body{
+    width: 100%;
+    min-height: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+}
+.post-descrip{
+    font-weight: 400;
+    margin: 20px 0px 20px 0px;
+}
+.post-body .fa{
+    color: #414142;
+    padding: 5px 10px 5px 0px;
+    cursor: pointer;
+
+}

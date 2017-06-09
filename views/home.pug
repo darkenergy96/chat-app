@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        title Home page
+        link(rel="stylesheet", href="css/bootstrap.css")
+        //- link(rel='stylesheet', href='css/home.css')
+    body
+        .container
+            if(user)
+                p hello #{user.email}
+                a(href="/users") users
+                br
+                a(href="/signout") signout
+            else
+                p Hello user 
+                a(href="/signin") login here
+                br
+                a(href="/signup") signup here

@@ -1,0 +1,20 @@
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        title Wizards chat
+        link(rel="stylesheet", href="css/app.css")
+        link(rel="manifest" href="/manifest.json")
+        script(src="/socket.io/socket.io.js")
+        script(src="/scripts/jquery.js")
+    body
+        .container(data-userid=user.id data-username=user.name())
+            .chat-container
+                .chat-header
+                    h3 Wizards
+                .chat-body
+                .chat-form
+                    form#chat-field
+                        input#input-chat(type="text" placeholder="Enter your message..")
+        script(src="scripts/app.js")
+        
