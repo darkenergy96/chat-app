@@ -42,12 +42,12 @@ router.use(function(req, res, next) {
 //     }
 // });
 router.get('/health',function (req,res) {
-    // res.sendFile(path.join(__dirname,'../public/healthcare/index.html'));
-    res.send('cool');
+    res.sendFile(path.join(__dirname,'../public/healthcare/index.html'));
+    // res.send('cool');
 })
 
 router.get('/',(req,res)=>{
-    res.sendFile(path.join(__dirname,'../public/healthcare/index.html'));
+    res.render('home')
 });
 
 router.get('/signin',isAuthenticated,(req,res)=>{
