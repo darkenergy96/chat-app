@@ -1,6 +1,8 @@
 let userId;
 let username;
-const socket = io();
+const socket = io.connect('//' + window.location.host, {
+  query: 'session_id=' + readCookie('your.sid-key';)
+});
 $.ajax({
     type:'GET',
     url:'/user',
@@ -45,13 +47,13 @@ socket.on('chat',function(data){
     }
 });
 //submit on click
-$('#send').click(function(){
-    if(!username){
-        alert('signin to chat!!');
-        return;
-    }
-    $('#chat-field').submit();
-});
+// $('#send').click(function(){
+//     if(!username){
+//         alert('signin to chat!!');
+//         return;
+//     }
+//     $('#chat-field').submit();
+// });
 
 // dom
 $('#chat-field').on('submit',function(e){
@@ -61,12 +63,15 @@ $('#chat-field').on('submit',function(e){
         return;
     }
     let msg = $('#chat-field input').val();
+    if(!msg){
+        return;
+    }
     console.log('msg:',msg);
-    $('#chat-field input').val('');
     socket.emit('chat',{
         from:{username:username,userId:userId},
         msg:msg
     });
+    $('#chat-field input').val('');
     if(!posData.currentUser){
     // append left
     appendMyMessage(msg,'my-chat-msg',posData.position);

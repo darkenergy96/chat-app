@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="jquery.js"></script>    
+    <script src="materialize.js"></script>
+    <title>Home page</title>
+</head>
+<body>
+    <div class="row">
+    <div class="col s4">
+    <ul class="collapsible collection with-header" data-collapsible="accordion" id="order-list">
+        <li class="collection-header orange lighten-2"><h6>Ongoing Orders</h6></li>
+        <!--<li>
+        <div class="collapsible-header"><b> 1.</b> Second <div class="secondary-content order-menu dropdown-button" data-activates='dropdown1'><i class="material-icons">more_vert</i></div>
+        <ul id='dropdown1' class='dropdown-content' height="300px">
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+  </ul> </div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor 
+          Lorem ipsum dolor sit amet.
+          Lorem ipsum dolor sit amet.
+          Lorem ipsum dolor sit amet.
+          Lorem ipsum dolor sit amet.sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</span></div>
+        </li>-->
+  </ul>
+    </div>
+    <form class="col s5 z-depth-1" id="form">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input name="username" id="username" type="text" class="validate">
+          <label for="username">Name</label>
+        </div>
+      </div>
+        <div class="row">
+            <div class="input-field col s12">
+            <i class="material-icons prefix">phone</i>
+            <input name="phone" id="phone" type="tel" class="validate">
+            <label for="phone">Telephone</label>
+            </div>
+        </div>
+        <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">location_city</i>
+          <textarea name="address" id="address" class="materialize-textarea"></textarea>
+          <label for="address">Address</label>
+        </div>
+      </div>
+      <div class="row medicine-field">
+         <div class="input-field col s9">
+          <i class="material-icons prefix">local_hospital</i>
+          <input name="medicine1" id="medicine1" type="text" class="validate">
+          <label for="medicine1">Medicine</label>
+         </div>
+         <div class="input-field col s3">
+          <input name="medicine1-qty" id="medicine1-qty" type="number" class="validate">
+          <label for="medicine1-qty">count</label>
+         </div>
+        </div>
+        <div class="row">
+          <div class="chip blue-grey lighten-2 col offset-s1 add-med" style="cursor:pointer">
+          Add
+            <i class="close material-icons">add</i>
+          </div>
+          <div class="chip blue-grey lighten-2 col remove-med" style="cursor:pointer">
+          remove
+            <i class="close material-icons">remove</i>
+          </div>
+        </div>
+     <div class="row">
+         <div class="col s6 offset-s4">
+           <button class="btn waves-effect waves-light" type="submit" name="action">Place Order
+            <!--<i class="material-icons right">send</i>-->
+        </button>
+         </div>
+     </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
