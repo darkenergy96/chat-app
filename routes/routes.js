@@ -47,7 +47,7 @@ router.get('/health',function (req,res) {
 })
 
 router.get('/',(req,res)=>{
-    res.render('home');
+    res.sendFile(path.join(__dirname,'../public/healthcare/index.html'));
 });
 
 router.get('/signin',isAuthenticated,(req,res)=>{
